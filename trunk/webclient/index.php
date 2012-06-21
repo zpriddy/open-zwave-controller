@@ -57,10 +57,10 @@
                                 strHtml2="";
 
                                 if (deviceDetails[3]=="Binary Switch" || deviceDetails[3]=="Binary Power Switch"){
-                                    strHtml2 += '<form>    <table>        <tr>            <td>                <img width="48" src="../images/lightbulb.png" alt=""/>                <input type="hidden" name="value" id="' + 'level' + deviceDetails[1] + '" value="0"/>                <input type="hidden" name="type" id="' + 'type' + deviceDetails[1] + '" value="' + deviceDetails[3] + '"/>            </td>            <td>                <div data-role="controlgroup" data-type="horizontal">                    <a href="#" class="switch" data-role="button" name="off" id="' + deviceDetails[1] + '" >Off</a>                    <a href="#" class="switch" data-role="button" name="on" id="' + deviceDetails[1] + '"  >On</a>                </div>            </td>        </tr>    </table></form>';
+                                    strHtml2 += '<form>    <table>        <tr>            <td>                <img width="48" src="../controlpanel/images/lightbulb.png" alt=""/>                <input type="hidden" name="value" id="' + 'level' + deviceDetails[1] + '" value="0"/>                <input type="hidden" name="type" id="' + 'type' + deviceDetails[1] + '" value="' + deviceDetails[3] + '"/>            </td>            <td>                <div data-role="controlgroup" data-type="horizontal">                    <a href="#" class="switch" data-role="button" name="off" id="' + deviceDetails[1] + '" >Off</a>                    <a href="#" class="switch" data-role="button" name="on" id="' + deviceDetails[1] + '"  >On</a>                </div>            </td>        </tr>    </table></form>';
                                 }
                                 if (deviceDetails[3]== "Multilevel Switch" || deviceDetails[3]=="Multilevel Power Switch"){
-                                    strHtml2 += '<form>    <table>        <tr>            <td>                <img width="48" src="../images/lightbulb.png" alt=""/>                <input type="hidden" name="value" id="' + 'level' + deviceDetails[1] + '" value="0"/>                <input type="hidden" name="type" id="' + 'type' + deviceDetails[1] + '" value="' + deviceDetails[3] + '"/>            </td>            <td>                <div data-role="controlgroup" data-type="horizontal">                    <a href="#" class="switch" data-role="button" name="off" id="' + deviceDetails[1] + '" >&nbsp;Off&nbsp;</a>                    <a href="#" class="switch" data-role="button" name="on" id="' + deviceDetails[1] + '"  >&nbsp;On&nbsp;</a>                </div>                <div data-role="controlgroup" data-type="horizontal">                    <a href="#" class="switch" data-role="button" name="down" id="' + deviceDetails[1] + '">Dim</a>                    <a href="#" class="switch" data-role="button" name="up" id="' + deviceDetails[1] + '" >Bright</a>                </div>            </td>        </tr>    </table></form> ';
+                                    strHtml2 += '<form>    <table>        <tr>            <td>                <img width="48" src="../controlpanel/images/lightbulb.png" alt=""/>                <input type="hidden" name="value" id="' + 'level' + deviceDetails[1] + '" value="0"/>                <input type="hidden" name="type" id="' + 'type' + deviceDetails[1] + '" value="' + deviceDetails[3] + '"/>            </td>            <td>                <div data-role="controlgroup" data-type="horizontal">                    <a href="#" class="switch" data-role="button" name="off" id="' + deviceDetails[1] + '" >&nbsp;Off&nbsp;</a>                    <a href="#" class="switch" data-role="button" name="on" id="' + deviceDetails[1] + '"  >&nbsp;On&nbsp;</a>                </div>                <div data-role="controlgroup" data-type="horizontal">                    <a href="#" class="switch" data-role="button" name="down" id="' + deviceDetails[1] + '">Dim</a>                    <a href="#" class="switch" data-role="button" name="up" id="' + deviceDetails[1] + '" >Bright</a>                </div>            </td>        </tr>    </table></form> ';
                                 }
                                 strHtml2 += '</p></div>';
                                 strHtml += strHtml2;
@@ -75,7 +75,7 @@
 
             $(function() {
 
-                $.get("../server.php", { command: 'devices'},
+                $.get("../controlpanel/server.php", { command: 'devices'},
                 function(data) {
                     get_rooms(data);
                     $('.switch').click(function() {
@@ -105,7 +105,7 @@
                         $('#level'+$(this).attr('id')).val(level);
                         node = $(this).attr("id");
                         type = $("#type"+node).val();
-                        $.get("../server.php", { command: 'control', node: node, level: level, type: type },
+                        $.get("../controlpanel/server.php", { command: 'control', node: node, level: level, type: type },
                         function(data) {
                             $("#response").html(data);
                         });
@@ -124,7 +124,7 @@
         <div data-role="page" id="main">
             <div data-role="header" data-position="inline">
                 <h1>Home Control</h1>
-                <a href="settings.html" data-icon="gear" class="ui-btn-right">Options</a>
+                <!--<a href="settings.html" data-icon="gear" class="ui-btn-right">Options</a>-->
             </div>
             <div class="ui-bar ui-bar-b">
                 <div id="response">&nbsp;</div>
