@@ -5,7 +5,7 @@
                 <?php include "logo.php";?>
             </td>
             <td width="470"><div id="response"></div></td>
-            <td width="200"><?php include "weather.php"; ?></td>
+            <td width="200"><?php //include "weather.php"; ?></td>
         </tr>
     </table>
 </div>

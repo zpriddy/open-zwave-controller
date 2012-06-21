@@ -2,28 +2,28 @@
 <?php MPage::BeginBlock() ?>
 <?php
 //a very primitive way to get the devices status.  This does not update when the devices change state.
-$log = file_get_contents("zwaveController/OZW_Log.txt");
-$states = array();
+//$log = file_get_contents("zwaveController/OZW_Log.txt");
+//$states = array();
 
-function backwardStrpos($haystack, $needle, $offset = 0) {
-    $length = strlen($haystack);
-    $offset = ($offset > 0) ? ($length - $offset) : abs($offset);
-    $pos = strpos(strrev($haystack), strrev($needle), $offset);
-    return ($pos === false) ? false : ( $length - $pos - strlen($needle) );
-}
-
-for ($node = 1; $node <= 13; $node++) {
-    $status = 0;
-    if (strpos($log, "report from node $node: level=")) {
-        if ($node < 10)
-            $status = substr($log, strpos($log, "report from node $node: level=") + 26, 3);
-        else
-            $status = substr($log, strpos($log, "report from node $node: level=") + 27, 3);
-    }
-    if (strpos($status, "2"))
-        $status = 0;
-    $states[$node] = $status;
-}
+//function backwardStrpos($haystack, $needle, $offset = 0) {
+//    $length = strlen($haystack);
+//    $offset = ($offset > 0) ? ($length - $offset) : abs($offset);
+//    $pos = strpos(strrev($haystack), strrev($needle), $offset);
+//    return ($pos === false) ? false : ( $length - $pos - strlen($needle) );
+//}
+//
+//for ($node = 1; $node <= 13; $node++) {
+//    $status = 0;
+//    if (strpos($log, "report from node $node: level=")) {
+//        if ($node < 10)
+//            $status = substr($log, strpos($log, "report from node $node: level=") + 26, 3);
+//        else
+//            $status = substr($log, strpos($log, "report from node $node: level=") + 27, 3);
+//    }
+//    if (strpos($status, "2"))
+//        $status = 0;
+//    $states[$node] = $status;
+//}
 
 //for ($node = 1; $node <= 13; $node++) {
 //    if (backwardStrpos($log, "Setting node $node to level")) {
@@ -44,18 +44,18 @@ for ($node = 1; $node <= 13; $node++) {
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
 <script type="text/javascript">       
-    function updateNodes(){
+//    function updateNodes(){
 <?php
-echo 'var nodes = {';
-foreach ($states as $key => $value) {
-    echo $key . ':' . $value . ',';
-}
-echo '};' . "\r";
-?>              var node;
-        for(node in nodes){
-            setNodeState(node, nodes[node]);
-        }
-    }
+//echo 'var nodes = {';
+//foreach ($states as $key => $value) {
+//    echo $key . ':' . $value . ',';
+//}
+//echo '};' . "\r";
+?>//              var node;
+//        for(node in nodes){
+//            setNodeState(node, nodes[node]);
+//        }
+//    }
     function setNodeState(node, level){
         if (level > 0){
             $("#btnOn"+node).attr("class","buttonOnS");
@@ -181,7 +181,7 @@ echo '};' . "\r";
             });
         })
 
-        updateNodes();
+        //updateNodes();
     });
 </script>
 <?php MPage::EndBlock("scripts") ?>
