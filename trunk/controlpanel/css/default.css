@@ -1,0 +1,142 @@
+body{
+    font-family: 'arial'; 
+    font-size:14px; 
+    margin:0px; 
+    padding:0px; 
+    background-color:#888;  
+}
+
+#wrapper{ width:970px; margin:0px auto; background-color: #dedede; border-left:solid 6px #666; border-right:solid 6px #666;}
+
+#header{background-image: url("../images/nodedetailsbg.jpg"); background-repeat: repeat-x; background-color: #1e1e1e;}
+#logo{float:left; padding:10px; color:#fff; font-size:20px;}
+#logo h1{font-size:28px; font-weight: bold;}
+#logo h2{font-size:12px; font-weight: normal; margin-top:-25px; margin-left: 130px; color:#999;}
+#logobulb {margin-top:15px;}
+
+#notifications {width:300px;}
+
+#weather {color:#fff; font-size: 12px;}
+#weather h1 {color:#fff; font-size: 14px;}
+#weather th {color:#45b9fb; text-align: right;}
+#weather td {color:#fff; font-weight: bold}
+
+#homelogo {float:left;}
+#login {width:729px; margin:0 auto; margin-top:100px;}
+
+#topmenu{float:left;padding:10px; background-color: #555; clear:both;}
+
+#topmenu ul{margin:0px; padding:0px;}
+
+#topmenu li{display:inline;}
+
+#topmenu a{color:#fff; margin-right:10px; text-decoration: none; padding:3px; font-size: 12px; font-weight: bold;}
+
+#userarea {padding:10px; background-color: #555; float:right;}
+
+#user {color:#45b9fb; margin-right:10px; text-transform: uppercase; font-size: 12px; font-weight: bold}
+
+#userarea ul{margin:0px; padding:0px;}
+
+#userarea li{display:inline;}
+
+#userarea a{color:#fff; margin-left:10px; text-decoration: none; padding:3px; font-size: 12px; font-weight: bold;}
+
+#topcenter{padding:10px; background-color: #555;}
+
+.currentpage{border-bottom:solid 2px #45b9fb; font-weight: bold;}
+
+#sidemenu{float:left; padding-top:10px; margin-left:10px; margin-bottom:10px;}
+
+#content{margin-left:220px; padding:10px;}
+
+#dash{padding:10px;}
+
+.menutitle {background-color: #242424; font-size: 18px; color:#fff; padding:5px; border-bottom: solid 1px #ccc;}
+
+.form th {font-size:11px; text-align: left;}
+.form td {font-size:11px;  margin-left:20px; padding:7px; font-weight: bold;}
+.form input { padding:5px; font-weight: bold; font-size:11px;}
+.form select { padding:5px; font-weight: bold; font-size:11px;}
+.form option { padding:5px; font-weight: bold; font-size:11px;}
+.form .button {color:#888; border:none;}
+
+#footer{padding:10px; clear:left; color:#fff; background-color: #555; font-size: 12px; font-weight: bold;}
+#footer a{color:#45b9fb;}
+
+#dg {border:solid 1px #000; border-collapse:collapse}
+#dg th {background-color:#000; color:#fff;}
+#dg td {border:solid 1px #000; padding:3px;}
+
+#nodeDetails {width:300px;}
+
+#response {width:400px; color:#fff; font-weight:bold; font-size:12px; padding:10px; background-color: #222; border:solid 1px #777;}
+
+#node {margin:0px; padding: 0px; color:#888}
+#node li {display: inline-block; list-style:none; width:200px; margin:9px; padding: 5px;}
+.nodename {font-size: 12px; padding:3px;  height:21px; font-weight: bold; color:#888; background-image: url("../images/nodetitlebg.jpg"); background-repeat: no-repeat;}
+.nodestate {border:solid 1px #323232;background-image: url("../images/nodedetailsbg.jpg"); background-repeat: repeat-x; height:120px; background-color: #1e1e1e;}
+.nodestate table {width:198px;}
+.level {font-size: 18px; padding:5px;}
+.button {width:44px; height:24px; font-weight: bold;}
+.buttonOn   {width:44px; height:24px; font-weight: bold; background-image: url("../images/btnon.jpg"); border: none; cursor: pointer;}
+.buttonOnS  {width:44px; height:24px; font-weight: bold; background-image: url("../images/btnons.jpg"); border: none;}
+.buttonOffS {width:44px; height:24px; font-weight: bold; background-image: url("../images/btnoffs.jpg"); border: none; cursor: pointer;}
+.buttonOff  {width:44px; height:24px; font-weight: bold; background-image: url("../images/btnoff.jpg"); border: none;}
+.buttonPlus {width:44px; height:24px; font-weight: bold; background-image: url("../images/btnplus.jpg"); border: none; cursor: pointer;}
+.buttonMin  {width:44px; height:24px; font-weight: bold; background-image: url("../images/btnmin.jpg"); border: none; cursor: pointer;}
+
+legend {font-weight: bold; font-size: 16px;}
+
+#repeatproperties {display: none;}
+
+
+#rooms{ border-bottom: solid 1px #444;}
+ul#menu, ul#menu ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    width: 15em;        
+}
+
+ul#menu a {
+    display: block;
+    text-decoration: none;	
+}
+
+ul#menu li {
+    margin-top: 0px;                
+}
+
+ul#menu li a {
+    background-color: #444;
+    color: #45b9fb;	
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px;
+    height:18px;
+    border-bottom:solid 1px #eee;
+}
+
+
+ul#menu li ul li a {
+    background-color: #444;
+    color: #fff;	
+    padding-left: 20px;
+}
+
+ul#menu li ul li a:hover {
+    color:#ccc;
+}
+
+.zone {margin-bottom: 10px;}
+.zonedetails {background-color: #999; padding:10px; margin-top:10px;}
+.zonetitle {padding:12px;  color:#fff; font-size:18px; background-color: #333;}
+
+.node {margin-bottom: 10px; display:none;}
+.nodetitle {padding:12px; color:#fff; background-color: #333; font-size:18px;}
+.nodedetails {padding:10px; margin-top:10px; background-color: #fff;}
+
+.bulb {margin-left:5px;margin-right:10px;}
+
+#addnew a {color: #f6b125;}
