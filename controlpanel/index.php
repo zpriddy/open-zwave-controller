@@ -1,6 +1,7 @@
 <?php require_once("config.php") ?>
 <?php MPage::BeginBlock() ?>
 <?php
+//a very primitive way to get the devices status.  This does not update when the devices change state.
 $log = file_get_contents("zwaveController/OZW_Log.txt");
 $states = array();
 
