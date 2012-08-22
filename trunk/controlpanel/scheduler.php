@@ -39,7 +39,7 @@ if (isset($_POST["Operation"])) {
     }
     $dataobject = new Dataclass();
     try {
-        $crontab = new Ssh2_crontab_manager('conradv.sytes.net', '22', 'zwave', 'psx1242');
+        $crontab = new Ssh2_crontab_manager('localhost', '22', 'zwave', 'password');
         switch ($_POST["Operation"]) {
             case "Add":
 
