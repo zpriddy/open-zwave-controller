@@ -1,16 +1,17 @@
 <?php
 
 session_start();
+error_reporting(E_ALL);
 
 //z-wave server settings
-define("ZWAVE_HOST", "10.0.0.10");
+define("ZWAVE_HOST", "127.0.0.1");
 define("ZWAVE_PORT", 6004);
 
 //Database settings
-define("HOST", "localhost");
+define("HOST", "127.0.0.1");
 define("DATABASE", "zwave");
-define("USER", "zwave");
-define("PASSWORD", "1234");
+define("USER", "root");
+define("PASSWORD", "psx1242");
 
 //Cookie expire after a month
 define("EXPIRE", time() + 60 * 60 * 24 * 30);
