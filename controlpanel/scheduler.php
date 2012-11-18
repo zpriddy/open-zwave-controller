@@ -484,7 +484,7 @@ while ($dsJob = $dsSchedules->fetch()) {
                         <th>State</th>
                         <td><select id="state" name="state">
                                 <?php
-                                echo $state . " " . $level;
+                                //echo $state . " " . $level;
                                 switch ($type) {
                                     case "Multilevel Switch":
                                         for ($i = 0; $i <= 100; $i++) {
@@ -629,6 +629,5 @@ while ($dsJob = $dsSchedules->fetch()) {
     <?php
 }
 ?>
-
 <?php MPage::EndBlock("body") ?>
 <?php MPage::Render("MDefault.php") ?> 
