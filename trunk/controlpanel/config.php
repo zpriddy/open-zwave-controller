@@ -11,7 +11,7 @@ define("ZWAVE_PORT", 6004);
 define("HOST", "127.0.0.1");
 define("DATABASE", "zwave");
 define("USER", "root");
-define("PASSWORD", "psx1242");
+define("PASSWORD", "password");
 
 //Cookie expire after a month
 define("EXPIRE", time() + 60 * 60 * 24 * 30);
